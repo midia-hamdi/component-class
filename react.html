@@ -37,34 +37,32 @@
     </style>
 </head>
 <body>
-    <form>
-        <div class="form-element">
-            <label for="username">Username</label>
-            <input type="text" id="username">
-        </div>
-        <div class="form-element">
-            <label for="password">Password</label>
-            <input type="text" id="password">
-        </div>
-        <button type="submit">Submit</button>
-    </form>
 
     <div id="root"></div>
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
 
-        class HelloWorld extends React.component {
+        class SigninForm extends React.Component {
             render() {
-                return <div>Hello World!</div>;
+             return <form>
+                        <div className="form-element">
+                            <label htmlFor="username">Username</label>
+                            <input type="text" id="username" />
+                        </div>
+                        <div className="form-element">
+                            <label htmlFor="password">Password</label>
+                            <input type="text" id="password" />
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
             }
         }
 
-        ReactDOM.render(<HelloWorld />, document.getElementById('root'));
+        ReactDOM.render(<SigninForm />, document.getElementById('root'));
         
     </script>
 </body>
