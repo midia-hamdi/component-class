@@ -46,18 +46,36 @@
 
     <script type="text/babel">
 
-        class SigninForm extends React.Component {
-            render() {
-             return <form>
-                        <div className="form-element">
+        class UserName extends React.Component {
+            render(){
+                return  <div className="form-element">
                             <label htmlFor="username">Username</label>
                             <input type="text" id="username" />
                         </div>
-                        <div className="form-element">
+            }
+        }
+
+        class PassWord extends React.Component {
+            render(){
+                return  <div className="form-element">
                             <label htmlFor="password">Password</label>
                             <input type="text" id="password" />
                         </div>
-                        <button type="submit">Submit</button>
+            }
+        }
+
+        class Button extends React.Component {
+            render(){
+                return  <button type="submit">Submit</button>
+            }
+        }
+
+        class SigninForm extends React.Component {
+            render() {
+             return <form>
+                        <UserName />
+                        <PassWord />
+                        <Button />
                     </form>
             }
         }
